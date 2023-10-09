@@ -19,8 +19,8 @@ function createOrUpdateUser(data: Partial<User>): User {
 	const initialValues: User = {
 		name: "Alison",
 		surname: "Baker",
-		email: "",
-		password: "",
+		email: "baker@mail.com",
+		password: "qweqwe",
 	};
 
 	return { ...initialValues, ...data };
