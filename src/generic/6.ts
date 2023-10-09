@@ -8,16 +8,26 @@
 */
 
 type User = {
-  name: string;
-  surname: string;
-  email: string;
-  password: string;
+	name: string;
+	surname: string;
+	email: string;
+	password: string;
+};
+
+function createOrUpdateUser(data: Partial<User>): User {
+	// Оновлення користувача
+	const initialValues: User = {
+		name: "Alison",
+		surname: "Baker",
+		email: "",
+		password: "",
+	};
+
+	return { ...initialValues, ...data };
 }
 
-function createOrUpdateUser(initialValues: User) {
-  // Оновлення користувача
-}
-
-createOrUpdateUser({ email: 'user@mail.com', password: 'password123' });
-
+createOrUpdateUser({
+	email: "user@mail.com",
+	password: "password123",
+});
 export {};
